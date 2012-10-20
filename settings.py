@@ -1,6 +1,6 @@
 # Django settings for awesomeTechEval project.
 
-DEBUG = False#True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
