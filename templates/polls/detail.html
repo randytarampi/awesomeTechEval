@@ -13,7 +13,9 @@
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
     <label for="choice{{ forloop.counter }}">{{ choice.choice }}</label><br />
   {% endfor %}
-  <br />
+
+  <p>Couldn't find an option you liked?</p>
+  <p><label>Just add it here:</label> <input input="text" name="newChoice" /></p>
   <input type="submit" value="Vote" />
 </form>
 

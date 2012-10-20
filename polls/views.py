@@ -7,7 +7,8 @@ from polls.models import Choice, Poll
 # Create your views here.
 def index(request):
     latest_poll_list = Poll.objects.all().order_by('-pub_date')[:5]
-    return render_to_response('polls/index.html', {'latest_poll_list': latest_poll_list})
+    return render_to_response('polls/index.html', {'latest_poll_list': latest_poll_list},
+                               context_instance=RequestContext(request))
 
 def detail(request, poll_id):
     p = get_object_or_404(Poll, pk=poll_id)
@@ -20,21 +21,54 @@ def results(request, poll_id):
 
 def vote(request, poll_id):
     p = get_object_or_404(Poll, pk=poll_id)
-    try:
-        selected_choice = p.choice_set.get(pk=request.POST['choice'])
-    except (KeyError, Choice.DoesNotExist):
-        # Redisplay the poll voting form.
-        return render_to_response('polls/detail.html', {
+    
+    if 'choice' in request.POST and len(request.POST['newChoice']) != 0:
+       return render_to_response('polls/detail.html', {
             'poll': p,
-            'error_message': "You have to pick/make a choice. It's not that hard.",
+            'error_message': "You have to pick/make a choice, a single choice - you can't do both. It's not that hard.",
         }, context_instance=RequestContext(request))
-        # The below commented out return statement is here as it was specified in tutorial 4.
-        # I've commented it out as I've commented out the relavent parts of urls.py
-        #return HttpResponseRedirect(reverse('poll_results', args=(p.id,)))
+    elif 'choice' in request.POST:
+        try:
+            selected_choice = p.choice_set.get(pk=request.POST['choice'])
+        except (KeyError, Choice.DoesNotExist):
+            # Redisplay the poll voting form.
+            return render_to_response('polls/detail.html', {
+                    'poll': p,
+                    'error_message': "It appears that you've somehow chosen an option that doesn't exist. Would you like to create it?",
+                    }, context_instance=RequestContext(request))
+            # The below commented out return statement is here as it was specified in tutorial 4.
+            # I've commented it out as I've commented out the relavent parts of urls.py
+            #return HttpResponseRedirect(reverse('poll_results', args=(p.id,)))
+        else:
+            selected_choice.votes += 1
+            selected_choice.save()
+            # Always return an HttpResponseRedirect after successfully dealing
+            # with POST data. This prevents data from being posted twice if a
+            # user hits the Back button.
+            return HttpResponseRedirect(reverse('polls.views.results', args=(p.id,)))
+    elif len(request.POST['newChoice']) > 0:
+        try:
+            selected_choice = p.choice_set.get(choice=request.POST['newChoice'])
+        except (KeyError, Choice.DoesNotExist):
+            new_choice = p.choice_set.create(choice=request.POST['newChoice'], votes=1)
+            new_choice.save()
+            return HttpResponseRedirect(reverse('polls.views.results', args=(p.id,)))
+        else:
+            selected_choice.votes += 1
+            selected_choice.save()
+            return render_to_response('polls/detail.html', {
+                    'poll': p,
+                    'error_message': "Would it kill you to be original?",
+                    }, context_instance=RequestContext(request))
     else:
-        selected_choice.votes += 1
-        selected_choice.save()
-        # Always return an HttpResponseRedirect after successfully dealing
-        # with POST data. This prevents data from being posted twice if a
-        # user hits the Back button.
-        return HttpResponseRedirect(reverse('polls.views.results', args=(p.id,)))
+        return render_to_response('polls/detail.html', {
+                    'poll': p,
+                    'error_message': "You have to pick or make a choice. It's not that hard.",
+                    }, context_instance=RequestContext(request))
+
+def create(request):
+    import datetime
+    p = Poll(question=request.POST['question'], pub_date=datetime.datetime.now())
+    p.save()
+    p.choice_set.create(choice=request.POST['choice'], votes=0)
+    return HttpResponseRedirect(reverse('polls.views.detail', args=(p.id,)))
