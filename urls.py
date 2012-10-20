@@ -18,5 +18,7 @@ urlpatterns = patterns('',
 
     # Tech Evaluation URLs
     url(r'^$', direct_to_template, {'template': 'index.html'}, name="index"),
+    url(r'^$', direct_to_template, {'template': 'about.html'}, name="about"),
+    url(r'^$', direct_to_template, {'template': 'writeup.html'}, name="writeup"),
     url(r'^polls/', include('polls.urls')),
 )

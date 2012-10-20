@@ -1,0 +1,89 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+    color: #333;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #0a7ed7;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#frame {
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#header {
+    position: absolute;
+    height: 37px;
+    width: 100%;
+    top: 0;
+    background: #417690;
+    color: #ffc;
+    overflow: hidden;
+}
+
+#leftHead {
+    padding: 0 10px;
+    margin: 8px 0;
+    font-size: 18px;
+    color: #f4f379;
+    position: absolute;
+}
+
+#rightHead { 
+    padding: 0 10px;
+    margin: 8px 0;
+    float: right;
+    font-size: 14px;
+    color: #f4f379;
+}
+
+#content {
+    padding: 37px 37px;
+}
+
+#footer {
+    position: absolute;
+    height: 37px; 
+    width: 100%;
+    bottom: 0;
+    background: #417690;
+    color: #f4f379;
+    overflow: hidden;
+}
+
+#leftFoot {
+    padding: 7px;
+    font-size: 14px;
+    color: #f4f379;
+    position: absolute;
+}
+
+#rightFoot {
+    float: right;
+    padding-top: 7px;
+    padding-right: 7px;
+    display: inline;
+    font-size: 14px;
+    color: #f4f379;
+}
+
+#leftHead a, #rightHead a, #leftFoot a, #rightFoot a {
+    color: #FFF;
+}
+
+#leftHead a:hover, #rightHead a:hover, #leftFoot a:hover, #rightFoot a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
