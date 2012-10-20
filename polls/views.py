@@ -26,8 +26,11 @@ def vote(request, poll_id):
         # Redisplay the poll voting form.
         return render_to_response('polls/detail.html', {
             'poll': p,
-            'error_message': "You didn't select a choice.",
+            'error_message': "You have to pick/make a choice. It's not that hard.",
         }, context_instance=RequestContext(request))
+        # The below commented out return statement is here as it was specified in tutorial 4.
+        # I've commented it out as I've commented out the relavent parts of urls.py
+        #return HttpResponseRedirect(reverse('poll_results', args=(p.id,)))
     else:
         selected_choice.votes += 1
         selected_choice.save()
