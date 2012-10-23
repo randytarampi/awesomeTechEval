@@ -68,7 +68,20 @@ def vote(request, poll_id):
 
 def create(request):
     import datetime
-    p = Poll(question=request.POST['question'], pub_date=datetime.datetime.now())
-    p.save()
-    p.choice_set.create(choice=request.POST['choice'], votes=0)
-    return HttpResponseRedirect(reverse('polls.views.detail', args=(p.id,)))
+    if len(request.POST['question']) == 0 and len(request.POST['choice']) == 0:
+	return render_to_response('polls/index.html', {
+                      	'error_message': "You need to type a choice and question in.",
+                    	}, context_instance=RequestContext(request))
+    elif len(request.POST['choice']) == 0:
+	return render_to_response('polls/index.html', {
+                      	'error_message': "You need to type a choice in.",
+                    	}, context_instance=RequestContext(request))
+    elif len(request.POST['question']) == 0:
+	return render_to_response('polls/index.html', {
+                      	'error_message': "You need to type a question in.",
+                    	}, context_instance=RequestContext(request))
+    else:
+    	p = Poll(question=request.POST['question'], pub_date=datetime.datetime.now())
+    	p.save()
+    	p.choice_set.create(choice=request.POST['choice'], votes=0)
+    	return HttpResponseRedirect(reverse('polls.views.detail', args=(p.id,)))

@@ -23,6 +23,9 @@
   create our own. We can promise cookies and well-wishes if you do!!!</p>
 <p class="finePrint">We were totally kidding about the cookies though.</p>
 <br />
+
+{% if error_message %}<p><strong class="error">{{ error_message }}</strong></p>{% endif %}
+
 <form action="/polls/create/" method="post">
   {% csrf_token %}
   <label>Question:</label>

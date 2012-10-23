@@ -21,6 +21,10 @@ a:hover {
 	font-size: 6px;
 }
 
+.error {
+	color: red;
+}
+
 #frame {
     min-height: 100%;
     width: 100%;
