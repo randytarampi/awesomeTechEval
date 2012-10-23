@@ -21,4 +21,16 @@ urlpatterns = patterns('',
     url(r'^about/', direct_to_template, {'template': 'about.html'}, name="about"),
     url(r'^writeup/', direct_to_template, {'template': 'writeup.html'}, name="writeup"),
     url(r'^polls/', include('polls.urls')),
+
 )
+
+#urlpatterns += patterns('',
+	#url(r'calendarapp/$', 'calendarapp.views.main'),
+	#(r"^(\d+)/$", "main"),
+	#(r"", "main"),
+	#(r"^(\d+)/$", "calendarapp.views.mainasfaf"),
+	#(r"", "main"),	
+#(r"^(\d+)/$", "main"),    
+#(r'^calendarapp(\d+)/$", "main"),
+    #(r"", "main"),
+#)
