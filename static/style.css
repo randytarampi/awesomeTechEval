@@ -17,6 +17,10 @@ a:hover {
     text-decoration: underline;
 }
 
+.finePrint {
+	font-size: 6px;
+}
+
 #frame {
     min-height: 100%;
     width: 100%;

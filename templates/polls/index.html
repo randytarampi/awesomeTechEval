@@ -18,10 +18,11 @@
 {% endif %}
 
 <h2>Here's a form so you can create your own poll</h2>
-<p>Want to make this page a little less boring? Create a poll of your own!</p>
-<p class="desperate">Please do. We have no content and we're too simple minded to create our own. We can promise cookies and well-wishes if you do!!!</p>
+<p>Want to make this page a little less boring? Create a poll of your
+  own! Please do. We have no content and we're too simple minded to
+  create our own. We can promise cookies and well-wishes if you do!!!</p>
 <p class="finePrint">We were totally kidding about the cookies though.</p>
-
+<br />
 <form action="/polls/create/" method="post">
   {% csrf_token %}
   <label>Question:</label>
