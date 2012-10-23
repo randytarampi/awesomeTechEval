@@ -3,7 +3,12 @@
 <h1>A Terribly Boring Blurb on a Terribly Boring Site About the Not-So-Terribly Boring Django Framework</h1>
 
 <h2>What is Django?</h2>
-<p><a href="https://www.djangoproject.com/">Django</a> is a <a href="http://www.python.org/">Python</a> based web framework built for speedy development and clean design. Originally developed with tight deadlines in mind, some on the order of a few hours from conceptualization to launch, Django allows web developers and designers to build and launch applications quickly and easily by</p>
+<p><a href="https://www.djangoproject.com/">Django</a> is
+  a <a href="http://www.python.org/">Python</a> based web framework
+  built for speedy development and clean design. Originally developed
+  with tight deadlines in mind, some on the order of a few hours from
+  conceptualization to launch, Django allows web developers and
+  designers to build and launch applications quickly and easily by</p>
 <ul>
   <li>providing a rich set of frameworks (or “apps”, as they put it) to draw from,</li>
   <li>abstracting away complex and tedious configuration tasks into 3 or 4 commands,</li>
@@ -11,28 +16,139 @@
 </ul>
 
 <h3>The Design: MTV?</h3>
-<p>Like many other popular web frameworks, Django follows the traditional <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model/View/Controller</a> (MVC) design pattern, albeit with a few <a href="https://docs.djangoproject.com/en/1.3/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names">caveats</a>. Each django app, when initialized, comes with (at least) two files, a <code>models.py</code>, which manages the data model and <code>views.py</code>, which manages (or <strong>controls</strong>) the views. The actual views take shape in a set of HTML templates, which can often be swapped in or out or otherwise edited as the designer pleases - allowing him or her to easily modify the appearance of a site, but not necessarily what is seen on the site.</p>
+<p>Like many other popular web frameworks, Django follows the
+  traditional <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model/View/Controller</a>
+  (MVC) design pattern, albeit with a
+  few <a href="https://docs.djangoproject.com/en/1.3/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names">caveats</a>. Each
+  django app, when initialized, comes with (at least) two files,
+  a <code>models.py</code>, which manages the data model
+  and <code>views.py</code>, which manages
+  (or <strong>controls</strong>) the views. The actual views take
+  shape in a set of HTML templates, which can often be swapped in or
+  out or otherwise edited as the designer pleases - allowing him or
+  her to easily modify the appearance of a site, but not necessarily
+  what is seen on the site.</p>
 
 <h3>The Philosophy: Reduce, Reuse, Recycle.</h3>
-<p>The templating system, along with the rich set of included frameworks and an easy way of deploying other third-party apps reduces redundancy - saving developers time when it comes to development and debugging. Django’s “<a href="http://en.wikipedia.org/wiki/DRY">Don’t Repeat Yourself</a>” (DRY) attitude manifests itself in <a href="https://docs.djangoproject.com/en/1.3/ref/generic-views/">generic views</a> and <a href="https://docs.djangoproject.com/en/1.3/topics/templates/">templates</a>. “Hot-pluggable” apps and frameworks included in Django, like the <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/">admin site</a>, or the easy to use <a href="https://docs.djangoproject.com/en/dev/ref/contrib/comments/">comments framework</a> provide functionality nearly right out of the box. Many third-party apps and frameworks can also be easily added and deployed, capitalizing on a large number of <a href="http://www.djangopackages.com/">Django packages</a> shared on the internet.</p>
+<p>The templating system, along with the rich set of included
+  frameworks and an easy way of deploying other third-party apps
+  reduces redundancy - saving developers time when it comes to
+  development and debugging. Django’s
+  “<a href="http://en.wikipedia.org/wiki/DRY">Don’t Repeat
+	Yourself</a>” (DRY) attitude manifests itself
+  in <a href="https://docs.djangoproject.com/en/1.3/ref/generic-views/">generic
+	views</a>
+  and <a href="https://docs.djangoproject.com/en/1.3/topics/templates/">templates</a>. “Hot-pluggable”
+  apps and frameworks included in Django, like
+  the <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/">admin
+	site</a>, or the easy to
+  use <a href="https://docs.djangoproject.com/en/dev/ref/contrib/comments/">comments
+	framework</a> provide functionality nearly right out of the
+  box. Many third-party apps and frameworks can also be easily added
+  and deployed, capitalizing on a large number
+  of <a href="http://www.djangopackages.com/">Django packages</a>
+  shared on the internet.</p>
 
 <h3>The Potential: It’s fast... and it scales.</h3>
-<p>Django allows developers and designers to hit the ground running without having to worry much about confusing database or web server configurations - instead allowing them to work with an <a href="https://docs.djangoproject.com/en/1.3/intro/tutorial01/#the-development-server">integrated web server</a> and <a href="https://docs.djangoproject.com/en/1.3/intro/tutorial01/#database-setup">SQLite databases</a>. When the time comes to deploy your site into a production environment, all you need to do is reconfigure a few <a href="https://docs.djangoproject.com/en/1.3/topics/settings/">settings</a> and following <a href="https://docs.djangoproject.com/en/1.3/howto/deployment/">a few easy instructions</a>. When your site goes big, and you need to scale, Django’s architecture lets you, all you have to do is <a href="https://docs.djangoproject.com/en/1.3/faq/general/#does-django-scale">add more hardware</a> - the guys over at <a href="http://disqus.com/">Disqus</a> know exactly how <a href="http://ontwik.com/python/disqus-scaling-the-world%E2%80%99s-largest-django-application/">good it is</a>.</p>
+<p>Django allows developers and designers to hit the ground running
+  without having to worry much about confusing database or web server
+  configurations - instead allowing them to work with
+  an <a href="https://docs.djangoproject.com/en/1.3/intro/tutorial01/#the-development-server">integrated
+	web server</a>
+  and <a href="https://docs.djangoproject.com/en/1.3/intro/tutorial01/#database-setup">SQLite
+	databases</a>. When the time comes to deploy your site into a
+  production environment, all you need to do is reconfigure a
+  few <a href="https://docs.djangoproject.com/en/1.3/topics/settings/">settings</a>
+  and
+  following <a href="https://docs.djangoproject.com/en/1.3/howto/deployment/">a
+	few easy instructions</a>. When your site goes big, and you need
+  to scale, Django’s architecture lets you, all you have to do
+  is <a href="https://docs.djangoproject.com/en/1.3/faq/general/#does-django-scale">add
+	more hardware</a> - the guys over
+  at <a href="http://disqus.com/">Disqus</a> know exactly
+  how <a href="http://ontwik.com/python/disqus-scaling-the-world%E2%80%99s-largest-django-application/">good
+	it is</a>.</p>
 
 
 <h2>What Isn’t Django?</h2>
-<p>For each of those good things we’ve just said about Django, we’re sure that there’s some sort of criticism of it by a fanboy or fangirl of a competing web framework. As such, below we discuss some of the pros and cons of using Django as opposed to other, similar frameworks.</p>
+<p>For each of those good things we’ve just said about Django, we’re
+  sure that there’s some sort of criticism of it by a fanboy or
+  fangirl of a competing web framework. As such, below we discuss some
+  of the pros and cons of using Django as opposed to other, similar
+  frameworks.</p>
 
 <h3>It’s not Rails</h3>
-<p><a href="http://rubyonrails.org/">Rails</a>, or more formally, <a href="http://www.ruby-lang.org/en/">Ruby</a> on Rails (RoR), is a popular web development framework based in Ruby. Like Django, Rails follows the MVC design pattern and focuses on minimizing code by adhering to the DRY principle. Also like Django, Rails makes use of an integrated development web server and SQLite databases, allowing developers to move quickly without worrying about the muddy details of deployment. For the most part, from a high level, the two frameworks are very similar, but as you dive deeper, core differences emerge.</p>
-<p>Rails and Django differ most in their philosophies - which greatly impacts how they do things. Whereas RoR works with implicit assumptions in mind, emphasising <a href="http://en.wikipedia.org/wiki/Convention_over_Configuration">Convention Over Configuration</a> (CoC), Django goes in the other direction, instead favouring <a href="http://www.python.org/dev/peps/pep-0020/">explicitness over implicitness</a>. While Rails automagically seems to handle most configuration tasks out of sight of the developer, Django seems to want him or her to be directly involved in the process, though without making the process a burden.</p>
+<p><a href="http://rubyonrails.org/">Rails</a>, or more
+  formally, <a href="http://www.ruby-lang.org/en/">Ruby</a> on Rails
+  (RoR), is a popular web development framework based in Ruby. Like
+  Django, Rails follows the MVC design pattern and focuses on
+  minimizing code by adhering to the DRY principle. Also like Django,
+  Rails makes use of an integrated development web server and SQLite
+  databases, allowing developers to move quickly without worrying
+  about the muddy details of deployment. For the most part, from a
+  high level, the two frameworks are very similar, but as you dive
+  deeper, core differences emerge.</p>
+<p>Rails and Django differ most in their philosophies - which greatly
+  impacts how they do things. Whereas RoR works with implicit
+  assumptions in mind,
+  emphasising <a href="http://en.wikipedia.org/wiki/Convention_over_Configuration">Convention
+	Over Configuration</a> (CoC), Django goes in the other direction,
+  instead
+  favouring <a href="http://www.python.org/dev/peps/pep-0020/">explicitness
+	over implicitness</a>. While Rails automagically seems to handle
+  most configuration tasks out of sight of the developer, Django seems
+  to want him or her to be directly involved in the process, though
+  without making the process a burden.</p>
 
 <h3>It’s not TurboGears</h3>
-<p><a href="http://www.turbogears.org/">TurboGears</a> (version 2 specifically, TG2) is a Python based <cite>“rapid development megaframework”</cite> inspired by the likes of Django and Rails. Much like Rails and Django, TG2 follows the MVC design pattern. Unlike the two however, TurboGears is built on top of other third-party components like <a href="http://www.sqlalchemy.org/">SQLAlchemy</a> which handles the data model, <a href="http://genshi.edgewall.org/">Genshi</a> which handles the views and <a href="http://www.pylonsproject.org/projects/pylons-framework/about">Pylons</a> which acts as the controller. All those third-party components aside, TurboGears lacks the "pluggable" nature that Django's apps have, with no real support for plugins.</p>
-<p>Despite its decentralized structure, TurboGears tries to cater to new developers, <a href="http://turbogears.org/en/welcome/turbogears-way">it’s philosophy</a> being <cite>“...focused on user experience, and creating a novice-friendly environment. We ship a smaller subset of components, and thus are better able to focus, test, and document things so that new users have the best possible experience.”</cite> However, whereas both Django and Rails have large <a href="http://stackoverflow.com/questions/tagged/ruby-on-rails">user</a> <a href="http://stackoverflow.com/questions/tagged/django">bases</a> and a large wealth of documentation and examples to draw on, the TG2 community is <a href="http://stackoverflow.com/questions/tagged/turbogears2">small</a>, and can’t boast big names like Rails can with <a href="http://www.rdio.com/">Twitter</a> or Django can with <a href="http://www.rdio.com/">Rdio</a> (that is, unless you don't count <a href="http://sourceforge.net/p/allura/wiki/Allura%20Wiki/">SourceForge</a>).</p>
+<p><a href="http://www.turbogears.org/">TurboGears</a> (version 2
+  specifically, TG2) is a Python based <cite>“rapid development
+	megaframework”</cite> inspired by the likes of Django and
+  Rails. Much like Rails and Django, TG2 follows the MVC design
+  pattern. Unlike the two however, TurboGears is built on top of other
+  third-party components
+  like <a href="http://www.sqlalchemy.org/">SQLAlchemy</a> which
+  handles the data
+  model, <a href="http://genshi.edgewall.org/">Genshi</a> which
+  handles the views
+  and <a href="http://www.pylonsproject.org/projects/pylons-framework/about">Pylons</a>
+  which acts as the controller. All those third-party components
+  aside, TurboGears lacks the "pluggable" nature that Django's apps
+  have, with no real support for plugins.</p>
+<p>Despite its decentralized structure, TurboGears tries to cater to
+  new
+  developers, <a href="http://turbogears.org/en/welcome/turbogears-way">it’s
+	philosophy</a> being <cite>“...focused on user experience, and
+	creating a novice-friendly environment. We ship a smaller subset
+	of components, and thus are better able to focus, test, and
+	document things so that new users have the best possible
+	experience.”</cite> However, whereas both Django and Rails have
+  large <a href="http://stackoverflow.com/questions/tagged/ruby-on-rails">user</a> <a href="http://stackoverflow.com/questions/tagged/django">bases</a>
+  and a large wealth of documentation and examples to draw on, the TG2
+  community
+  is <a href="http://stackoverflow.com/questions/tagged/turbogears2">small</a>,
+  and can’t boast big names like Rails can
+  with <a href="http://www.rdio.com/">Twitter</a> or Django can
+  with <a href="http://www.rdio.com/">Rdio</a> (that is, unless you
+  don't
+  count <a href="http://sourceforge.net/p/allura/wiki/Allura%20Wiki/">SourceForge</a>).</p>
 
 <h3>It Doesn’t Do It All</h3>
-<p>No one single framework can do it all – no one single framework will attract everyone in droves – each has its own strengths and weaknesses. Django’s minimalist design forces users to be actively involved in their site’s configuration and deployment, but makes it easy. Rails’ “magic” takes care of a lot of the heavy lifting, producing results with minimal effort. TurboGears’ puts the developer in control of his or her application – it’s internal components able to be modified and worked on in ways that the other two cannot be (due to their highly integrated and dependent internal modules).</p>
+<p>No one single framework can do it all – no one single framework
+  will attract everyone in droves – each has its own strengths and
+  weaknesses. Django’s philosophy forces users to be actively involved
+  in their site’s configuration and deployment, but makes it
+  easy. Rails’ “magic” takes care of a lot of the heavy lifting,
+  producing results with minimal effort. TurboGears’ puts the
+  developer in control of his or her application – it’s internal
+  components able to be modified and worked on in ways that the other
+  two cannot be (due to their highly integrated and dependent internal
+  modules).</p>
+<p>That all said, you wouldn't be making a 3D web based game
+  with either of these frameworks. Given it's history, coming out
+  of the newsroom, Django is very good for publishing type
+  applications that focus on CRUD DB operations, but lacks depth
+  elsewhere.</p>
 
 <h2>Related Reading</h2>
 <p>We didn’t necessarily use these in our writeup, but we did peruse them before we wrote this.</p>

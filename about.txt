@@ -1,0 +1,20 @@
+So, as you can see, the project thus far is pretty simplistic.
+
+If you want to poke around the admin interface, you can do it with the
+username "awesomeTechEval" and password "aTEpassword12". There
+probably isn't much to see there.
+
+Things to note:
+	* Custom 404 & 500 Error views: I thought that this was a cool,
+	but largely useless feature. Still cool though - I wish I had the
+	time to make nice looking screens.
+
+	* Project structure: Like the about page says on the site, it's
+	just more of a disparate collection of apps. We have the built-in
+	admin app, and a poll app. We're supposed to have two or three
+	others, but the learning curve just stopped us like a wall.
+
+	* Templates!: By far the best thing of what we've done. We've got
+	a seamless transition between pages (and apps). Try going from the
+	polls to the admin interface - we thought it was nice looking (and
+	consistent - one of Django's core principles).
