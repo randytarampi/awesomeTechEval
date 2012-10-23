@@ -1,3 +1,4 @@
+from calendarapp.models import Entry
 from django.contrib import admin
 
 class EntryAdmin(admin.ModelAdmin):
