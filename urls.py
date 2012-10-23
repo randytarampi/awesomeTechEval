@@ -1,9 +1,8 @@
 from django.conf.urls.defaults import *
 from django.views.generic.simple import direct_to_template
-from forum.models import *
 
 # Uncomment the next two lines to enable the admin:
-#from django.contrib import admin
+from django.contrib import admin
 #admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -28,6 +27,7 @@ urlpatterns = patterns('',
 
 
 #Clocke... more blood sweat and tears... dead code that was simply too problematic to fix in the timeframe...
+#Actually after some floorhockey ... clarity came to me
 
 #urlpatterns = patterns('forum.views',
 #	(r"", "main"),    
@@ -37,7 +37,6 @@ urlpatterns = patterns('',
 	#(r"^reply/(\d+)/$", "reply"),
 	#(r"^profile/(\d+)/$", "profile"),
 	#(r"^new_thread/(\d+)/$", "new_thread"),
-    
 #)
 
 
