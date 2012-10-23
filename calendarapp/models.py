@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib import admin
+
 # It may look impressive, but honestly the bulk of this code came from
 #http://lightbird.net/dbe/cal1.html
 
@@ -29,13 +29,4 @@ class Entry(models.Model):
 
     class Meta:
         verbose_name_plural = "entries"
-
-
-### Admin
-
-class EntryAdmin(admin.ModelAdmin):
-    list_display = ["creator", "date", "title", "snippet"]
-    list_filter = ["creator"]
-
-admin.site.register(Entry, EntryAdmin)
 
