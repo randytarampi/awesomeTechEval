@@ -121,7 +121,11 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'polls',
+<<<<<<< HEAD
     'calendarapp',
+=======
+    'about',
+>>>>>>> 911e169243489ce5426ce0bd5fb304d1005d522b
 )
 
 # A sample logging configuration. The only tangible logging
