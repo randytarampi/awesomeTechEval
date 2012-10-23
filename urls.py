@@ -3,7 +3,7 @@ from django.views.generic.simple import direct_to_template
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
-admin.autodiscover()
+#admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -24,6 +24,21 @@ urlpatterns = patterns('',
     url(r'^polls/', include('polls.urls')),
 
 )
+
+
+#Clocke... more blood sweat and tears... dead code that was simply too problematic to fix in the timeframe...
+#Actually after some floorhockey ... clarity came to me
+
+#urlpatterns = patterns('forum.views',
+#	(r"", "main"),    
+#	(r"^forum/(\d+)/$", "forum"),
+#	(r"^thread/(\d+)/$", "thread"),
+	#(r"^post/(new_thread|reply)/(\d+)/$", "post"),
+	#(r"^reply/(\d+)/$", "reply"),
+	#(r"^profile/(\d+)/$", "profile"),
+	#(r"^new_thread/(\d+)/$", "new_thread"),
+#)
+
 
 #urlpatterns += patterns('',
 	#url(r'calendarapp/$', 'calendarapp.views.main'),

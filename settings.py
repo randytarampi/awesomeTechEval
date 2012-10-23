@@ -123,6 +123,7 @@ INSTALLED_APPS = (
     'polls',
     'calendarapp',
     'about',
+    #'forum',
 )
 
 # A sample logging configuration. The only tangible logging
