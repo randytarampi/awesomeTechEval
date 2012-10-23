@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import *
 from django.views.generic.simple import direct_to_template
+from forum.models import *
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -24,6 +25,18 @@ urlpatterns = patterns('',
     url(r'^polls/', include('polls.urls')),
 
 )
+
+urlpatterns = patterns('dbe.forum.views',
+	(r"", "main"),    
+	(r"^forum/(\d+)/$", "forum"),
+	(r"^thread/(\d+)/$", "thread"),
+	(r"^post/(new_thread|reply)/(\d+)/$", "post"),
+	(r"^reply/(\d+)/$", "reply"),
+	(r"^profile/(\d+)/$", "profile"),
+	(r"^new_thread/(\d+)/$", "new_thread"),
+    
+)
+
 
 #urlpatterns += patterns('',
 	#url(r'calendarapp/$', 'calendarapp.views.main'),
