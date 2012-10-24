@@ -1,4 +1,6 @@
-html, body {
+/* Mostly borrowed from the Django Admin CSS sheet, though fixed for our base sheet. */
+
+body {
     height: 100%;
     padding: 0;
     margin: 0;
@@ -32,7 +34,7 @@ a:hover {
 }
 
 #header {
-    position: absolute;
+    position: fixed;
     height: 37px;
     width: 100%;
     top: 0;
@@ -62,7 +64,7 @@ a:hover {
 }
 
 #footer {
-    position: absolute;
+    position: fixed;
     height: 37px; 
     width: 100%;
     bottom: 0;
