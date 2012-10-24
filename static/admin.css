@@ -1,7 +1,7 @@
 /* CSS for our Django Admin base page */
 
 #header {
-    position: fixed;
+    position: absolute;
     height: 37px;
     width: 100%;
     top: 0;
@@ -16,7 +16,7 @@
 }
 
 #footerBar {
-    position: fixed;
+    position: absolute;
     height: 37px; 
     width: 100%;
     bottom: 0;
