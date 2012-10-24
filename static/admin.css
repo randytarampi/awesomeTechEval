@@ -13,7 +13,6 @@
 #leftFoot {
     padding: 7px;
     font-size: 14px;
-    color: #f4f379;
     position: absolute;
 }
 
@@ -23,7 +22,6 @@
     padding-right: 7px;
     display: inline;
     font-size: 14px;
-    color: #f4f379;
 }
 
 #leftFoot a, #rightFoot a {

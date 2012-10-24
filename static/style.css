@@ -39,7 +39,7 @@ a:hover {
     width: 100%;
     top: 0;
     background: #417690;
-    color: #ffc;
+    color: #f4f379;
     overflow: hidden;
 }
 
@@ -47,7 +47,6 @@ a:hover {
     padding: 0 10px;
     margin: 8px 0;
     font-size: 18px;
-    color: #f4f379;
     position: absolute;
 }
 
@@ -56,7 +55,6 @@ a:hover {
     margin: 8px 0;
     float: right;
     font-size: 14px;
-    color: #f4f379;
 }
 
 #content {
