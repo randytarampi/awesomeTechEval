@@ -22,7 +22,7 @@ urlpatterns = patterns('',
     url(r'^writeup/', direct_to_template, {'template': 'writeup.html'}, name="writeup"),
     url(r'^500/', direct_to_template, {'template': 'error.html'}, name="500"),
     url(r'^polls/', include('polls.urls')),
-
+	url(r'^blog/', include('blog.urls')),
 )
 
 

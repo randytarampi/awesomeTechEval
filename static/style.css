@@ -102,3 +102,19 @@ a:hover {
     color: white;
     text-decoration: underline;
 }
+
+#container { margin: auto; width: 800px; border: 0px solid; }
+
+h3 { margin-right: 30px; display: inline; }
+
+#menu a {
+            text-decoration: none;
+            background: #eee;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            border-right: 2px solid #fff;
+            padding-right: 3px;
+            padding-left: 3px;
+            color: #777;
+            font-size: 0.9em;
+}
