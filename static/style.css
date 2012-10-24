@@ -7,7 +7,7 @@ body {
     font-size: 16px;
     font-family: "Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
     color: #333;
-    background: #fff;
+    background: white;
 }
 
 a {
@@ -28,9 +28,9 @@ a:hover {
 }
 
 #frame {
+    position: relative;
     min-height: 100%;
     width: 100%;
-    position: relative;
 }
 
 #header {
@@ -58,7 +58,7 @@ a:hover {
 }
 
 #content {
-    padding: 37px 37px;
+    padding: 37px;
 }
 
 #footer {
@@ -72,10 +72,9 @@ a:hover {
 }
 
 #leftFoot {
+    position: absolute;
     padding: 7px;
     font-size: 14px;
-    color: #f4f379;
-    position: absolute;
 }
 
 #rightFoot {
@@ -84,14 +83,13 @@ a:hover {
     padding-right: 7px;
     display: inline;
     font-size: 14px;
-    color: #f4f379;
 }
 
-#leftHead a, #rightHead a, #leftFoot a, #rightFoot a {
-    color: #FFF;
+#header a, #footer a {
+    color: white;
 }
 
-#leftHead a:hover, #rightHead a:hover, #leftFoot a:hover, #rightFoot a:hover {
-    color: #FFF;
+#header a:hover, #footer a:hover {
+    color: white;
     text-decoration: underline;
 }

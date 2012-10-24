@@ -1,5 +1,20 @@
 /* CSS for our Django Admin base page */
 
+#header {
+    position: fixed;
+    height: 37px;
+    width: 100%;
+    top: 0;
+	left: 0;
+    background: #417690;
+    color: #f4f379;
+    overflow: hidden;
+}
+
+#container {
+	padding-top: 37px;
+}
+
 #footerBar {
     position: fixed;
     height: 37px; 
@@ -24,11 +39,11 @@
     font-size: 14px;
 }
 
-#leftFoot a, #rightFoot a {
-    color: #FFF;
+#footerBar a {
+    color: white;
 }
 
-#leftFoot a:hover, #rightFoot a:hover {
-    color: #FFF;
+#footerBar a:hover {
+    color: white;
     text-decoration: underline;
 }
