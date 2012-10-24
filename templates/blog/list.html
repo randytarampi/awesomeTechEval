@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 
 {% block sidebar %}
-    <style type="text/css">
-        #sidebar { float: right; border: 1px dotted #ccc; padding: 4px; }
-        a { margin-left: 15px; }
-    </style>
     <div id="sidebar">
         Monthly Archive
         <p>
@@ -31,6 +27,8 @@
         .pagination { margin-top: 20px; margin-left: -20px; }
     </style>
     <div class="main">
+
+		<h5>This code was taken and adapted from <a href="http://lightbird.net/dbe/blog.html">this tutorial site</a>.</h5>
 
         <!-- Posts  -->
             {% for post in post_list %}
