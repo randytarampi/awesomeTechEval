@@ -6,6 +6,7 @@ html {
 
 body {
     height: 100%;
+    width: 100%;
     padding: 0;
     margin: 0;
     font-size: 16px;
@@ -30,10 +31,18 @@ a:hover {
     color: red;
 }
 
+.pollRelated {
+	width: 250px;
+	margin-bottom: 14px;
+}
+
+.pollRelated input[type="text"] {
+	width: 100%;
+}
+
 #frame {
-    position: relative;
     min-height: 100%;
-    width: 100%;
+    position: relative;
 }
 
 #header {
@@ -92,12 +101,4 @@ a:hover {
 #header a:hover, #footer a:hover {
     color: white;
     text-decoration: underline;
-}
-
-#pollCreate {
-	width: 250px;
-}
-
-#pollCreate input {
-	width: 100%;
 }

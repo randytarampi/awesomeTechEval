@@ -6,6 +6,7 @@
 
 {% if error_message %}<p><strong class="error">{{ error_message }}</strong></p>{% endif %}
 
+
 <form action="/polls/{{ poll.id }}/vote/" method="post">
   {% csrf_token %}
 
@@ -15,7 +16,7 @@
   {% endfor %}
 
   <p>Couldn't find an option you liked?</p>
-  <label>Just add it here:</label><br />
+  <label>Just add it here:</label>
 	<input input="text" name="newChoice" /><br />
 	<br />
   <input type="submit" value="Vote" />

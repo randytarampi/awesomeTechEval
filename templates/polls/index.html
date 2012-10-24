@@ -30,7 +30,7 @@
 
 {% if error_message %}<p><strong class="error">{{ error_message }}</strong></p>{% endif %}
 
-<div id="pollCreate">
+<div class="pollRelated">
 <form action="/polls/create/" method="post">
   {% csrf_token %}
   <label>Question:</label>
