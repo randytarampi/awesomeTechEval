@@ -93,3 +93,11 @@ a:hover {
     color: white;
     text-decoration: underline;
 }
+
+#pollCreate {
+	width: 250px;
+}
+
+#pollCreate input {
+	width: 100%;
+}

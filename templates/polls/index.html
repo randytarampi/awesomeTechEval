@@ -30,14 +30,17 @@
 
 {% if error_message %}<p><strong class="error">{{ error_message }}</strong></p>{% endif %}
 
+<div id="pollCreate">
 <form action="/polls/create/" method="post">
   {% csrf_token %}
   <label>Question:</label>
     <input type="text" name="question" /><br />
+  <br />
   <label>Choice:</label>
     <input type="text" name="choice" /><br />
   <br />
   <input type="submit" value="Create & Vote" />
 </form>
+</div>
 
 {% endblock %}
