@@ -11,15 +11,14 @@
 }
 
 #leftFoot {
-    padding: 7px;
+    padding: 10px;
     font-size: 14px;
     position: absolute;
 }
 
 #rightFoot {
     float: right;
-    padding-top: 7px;
-    padding-right: 7px;
+    padding: 10px;
     display: inline;
     font-size: 14px;
 }
