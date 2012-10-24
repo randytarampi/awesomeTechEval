@@ -1,20 +1,5 @@
 /* CSS for our Django Admin base page */
 
-#header {
-    position: absolute;
-    height: 37px;
-    width: 100%;
-    top: 0;
-	left: 0;
-    background: #417690;
-    color: #f4f379;
-    overflow: hidden;
-}
-
-#container {
-	padding-top: 37px;
-}
-
 #footerBar {
     position: absolute;
     height: 37px; 
