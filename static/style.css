@@ -1,4 +1,5 @@
 /* Mostly borrowed from the Django Admin CSS sheet, though fixed for our base sheet. */
+/* Some borrowed from the Django tutorial referred to in the blog */
 
 html {
     height: 100%;
@@ -23,6 +24,11 @@ a:hover {
     text-decoration: underline;
 }
 
+h3 { 
+    margin-right: 30px;
+    display: inline;
+}
+
 .finePrint {
     font-size: 6px;
 }
@@ -38,6 +44,46 @@ a:hover {
 
 .pollRelated input[type="text"] {
 	width: 100%;
+}
+
+.main { 
+    margin-left: 25px;
+    margin-top: 30px;
+}
+
+.time { 
+    font-size: 0.8em;
+    margin-top: 2px;
+}
+
+.body { 
+    font-size: 1.1em; 
+    margin-top: 2px;
+}
+
+.commentlink { 
+    text-align: right;
+}
+
+.step-links a { 
+    font-size: 0.89em;
+}
+
+.title {
+    font-size: 1.4em;
+    margin-top: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 4px;
+    margin-left: 5px;
+}
+
+.messages { 
+    margin-left: 20px;
+}
+
+.pagination { 
+    margin-top: 20px; 
+    margin-left: -20px; 
 }
 
 #frame {
@@ -98,12 +144,8 @@ a:hover {
     color: white;
 }
 
-#header a:hover, #footer a:hover {
-    color: white;
-    text-decoration: underline;
+#sidebar {
+    float: right;
+    border: 1px dotted #ccc;
+    padding: 4px;
 }
-
-h3 { margin-right: 30px; display: inline; }
-
-#sidebar { float: right; border: 1px dotted #ccc; padding: 4px; }
-

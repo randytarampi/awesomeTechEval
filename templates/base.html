@@ -26,7 +26,12 @@
 	  <a href="/blog/">Blog</a>   
       </span>
     </div>
-  
+
+  <div id="sidebar">
+    {% block sidebar %}
+    {% endblock %}
+  </div>
+
   <div id="content">
     {% block content %}
     {% endblock %}

@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block sidebar %}
-    <div id="sidebar">
         Monthly Archive
         <p>
         {% for month in months %}
@@ -9,26 +8,12 @@
             <a href="{% url blog.views.month month.0 month.1 %}">{{ month.2 }}</a> <br />
         {% endfor %}
         </p>
-    </div>
 {% endblock %}
 
 {% block content %}
-    <style type="text/css">
-        .main { margin-left: 25px; margin-top: 30px; }
-        .time { font-size: 0.8em; margin-top: 2px; }
-        .body { font-size: 1.1em; margin-top: 2px; }
-        .commentlink { text-align: right; }
-        .step-links a { font-size: 0.89em; }
-        .title {
-            font-size: 1.4em; margin-top: 20px; border-bottom: 1px solid #ccc;
-            padding-left: 4px; margin-left: 5px;
-        }
-        .messages { margin-left: 20px; }
-        .pagination { margin-top: 20px; margin-left: -20px; }
-    </style>
     <div class="main">
 
-		<h5>This code was taken and adapted from <a href="http://lightbird.net/dbe/blog.html">this tutorial site</a>.</h5>
+		<p>This code was taken and adapted from <a href="http://lightbird.net/dbe/blog.html">this tutorial site</a>.</p>
 
         <!-- Posts  -->
             {% for post in post_list %}
