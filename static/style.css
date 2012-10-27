@@ -29,6 +29,10 @@ h3 {
     display: inline;
 }
 
+.dashboard #content {
+	width: auto;
+}
+
 .finePrint {
     font-size: 6px;
 }
@@ -92,7 +96,7 @@ h3 {
 }
 
 #header {
-    position: absolute;
+    position: fixed;
     height: 37px;
     width: 100%;
     top: 0;
@@ -115,13 +119,15 @@ h3 {
 
 #content {
     padding: 37px;
+	margin: 0px 15px;
 }
 
 #footer {
-    position: absolute;
+    position: fixed;
     height: 37px; 
     width: 100%;
     bottom: 0;
+	padding: 0;
     background: #417690;
     color: #f4f379;
     overflow: hidden;

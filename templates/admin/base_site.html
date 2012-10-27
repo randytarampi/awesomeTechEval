@@ -1,0 +1,30 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block extrastyle %}{% load adminmedia %}{{ block.super }}<link rel="stylesheet" type="text/css" href="/static/style.css" />{% endblock %}
+
+{% block title %}{{ title }} | {% trans 'Django site admin' %}{% endblock %}
+
+{% block branding %}
+<div id="leftHead"><a href="/">Team Awesome</a> Django Administration</div>
+{% endblock %}
+
+{% block footer %}
+<div id="footer">
+	<span id="leftFoot">
+      <a href="javascript:history.go(-1)">Back</a> | <a href="/">Home</a> | <a href="javascript:history.go(1)">Forward</a>
+    </span>
+    <span id="rightFoot">
+      By <a href="https://github.com/randytarampi"
+      >Randy
+      Tarampi</a>, <a href="https://github.com/FaceBones"
+      >Steven Evans</a>
+      & <a href="https://github.com/clocke">Conrad
+      Locke</a> | As pulled
+      from <a href="https://github.com/randytarampi/awesomeTechEval"
+      >GitHub</a>
+    </span>
+</div>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
