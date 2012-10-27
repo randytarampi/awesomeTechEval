@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+{% block head %}
 <head>
   <link rel="stylesheet" type="text/css" href="/static/style.css" />
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>Team Awesome Demo Site</title>
 </head>
+{% endblock %}
 
+{% block body %}
 <body>
 <div id="frame">
-  
   <div id="header">
     <span id="leftHead">
       <a href="/">Team Awesome</a> Django Evaluation
@@ -52,7 +54,8 @@
       >GitHub</a>
     </span>
   </div>
-
 </div>
 </body>
+{% endblock %}
+
 </html>
