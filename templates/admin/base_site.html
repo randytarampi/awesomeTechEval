@@ -6,7 +6,7 @@
 {% block title %}{{ title }} | {% trans 'Django site admin' %}{% endblock %}
 
 {% block branding %}
-<div id="leftHead"><a href="/">Team Awesome</a> Django Administration</div>
+<div id="leftHead"><a href="{% url index %}">Team Awesome</a> Django Administration</div>
 {% endblock %}
 
 {% block footer %}

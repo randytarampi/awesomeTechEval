@@ -13,18 +13,18 @@
 <div id="frame">
   <div id="header">
     <span id="leftHead">
-      <a href="/">Team Awesome</a> Django Evaluation
+      <a href="{% url index %}">Team Awesome</a> Django Evaluation
     </span>
     <span id="rightHead">
-      <a href="/">Home</a> |
-      <a href="/about/">About</a> | 
-      <a href="/writeup/">Writeup</a> |
+      <a href="{% url index %}">Home</a> |
+      <a href="{% url about_index %}">About</a> | 
+      <a href="{% url writeup %}">Writeup</a> |
 	  <a href="https://docs.google.com/presentation/pub?id=1PlHPK2eg71o_OgaF3P_U2tMauLHQhj9IFxSj-1xpPcE"
 	  >Presentation</a> |
       <a href="/admin/">Admin</a> |
-      <a href="/404/">404</a> |
-      <a href="/500/">500</a> |
-      <a href="/polls/">Polls</a> |
+      <a href="/nowhere/">404</a> |
+      <a href="{% url 500 %}">500</a> |
+      <a href="{% url poll_index %}">Polls</a> |
 	  <a href="/blog/">Blog</a>   
       </span>
     </div>

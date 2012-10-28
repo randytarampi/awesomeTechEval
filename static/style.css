@@ -37,7 +37,7 @@ h3 {
     font-size: 6px;
 }
 
-.error {
+.error, obviousError {
     color: red;
 }
 
