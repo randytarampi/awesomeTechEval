@@ -9,6 +9,8 @@ Featuring Django and will be located at http://cmpt470.csil.sfu.ca:8017
 
 A half completed version was submitted on the 24th, which can be found tagged as [final](https://github.com/randytarampi/awesomeTechEval/tree/final), though we intend on finishing the features that we did not complete at a later date.
 
+Actually, instead of "finishing" it, we're probably going to use this as a testing ground for stuff we find online.
+
 Acknowledgements:
 -----------------
 
