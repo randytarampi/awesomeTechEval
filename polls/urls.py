@@ -1,29 +1,24 @@
 from django.conf.urls.defaults import patterns, include, url
+from django.views.generic import DetailView, ListView
+from polls.models import Poll
 
 urlpatterns = patterns('polls.views',
-    url(r'^$', 'index'),
-    url(r'^(?P<poll_id>\d+)/$', 'detail'),
-    url(r'^(?P<poll_id>\d+)/results/$', 'results'),
-    url(r'^(?P<poll_id>\d+)/vote/$', 'vote'),
-    url(r'^create/', 'create'),
-)
-
-# The below URL patterns are how Django stays DRY.
-# They allow us to eliminate the silly looking methods called above in views.py
-# I've decided not to use them as the above way is more understandable in MVC terms.
-"""
     url(r'^$',
         ListView.as_view(
             queryset=Poll.objects.order_by('-pub_date')[:5],
             context_object_name='latest_poll_list',
-            template_name='polls/index.html')),
+            template_name='polls/index.html'),
+            name='poll_index'),
     url(r'^(?P<pk>\d+)/$',
         DetailView.as_view(
             model=Poll,
-            template_name='polls/detail.html')),
+            template_name='polls/detail.html'),
+            name='poll_detail'),
     url(r'^(?P<pk>\d+)/results/$',
         DetailView.as_view(
             model=Poll,
             template_name='polls/results.html'),
         name='poll_results'),
-"""
+    url(r'^(?P<poll_id>\d+)/vote/$', 'vote', name='poll_vote'),
+    url(r'^create/', 'create', name='poll_create'),
+)

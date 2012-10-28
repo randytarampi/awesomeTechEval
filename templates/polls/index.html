@@ -14,7 +14,7 @@
 {% if latest_poll_list %}
     <ul>
     {% for poll in latest_poll_list %}
-        <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
+        <li><a href="{% url poll_detail pk=poll.id %}">{{ poll.question }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
@@ -31,7 +31,7 @@
 {% if error_message %}<p><strong class="error">{{ error_message }}</strong></p>{% endif %}
 
 <div class="pollRelated">
-<form action="/polls/create/" method="post">
+<form action="{% url poll_create %}" method="post">
   {% csrf_token %}
   <label>Question:</label>
     <input type="text" name="question" /><br />

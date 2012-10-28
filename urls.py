@@ -18,11 +18,11 @@ urlpatterns = patterns('',
 
     # Tech Evaluation URLs
     url(r'^$', direct_to_template, {'template': 'index.html'}, name="index"),
-    url(r'^about/', include('about.urls')),#direct_to_template, {'template': 'about.html'}, name="about"),
-    url(r'^writeup/', direct_to_template, {'template': 'writeup.html'}, name="writeup"),
-    url(r'^500/', direct_to_template, {'template': 'error.html'}, name="500"),
-    url(r'^polls/', include('polls.urls')),
-	url(r'^blog/', include('blog.urls')),
+    url(r'^about/', include('about.urls'), name = "about"),
+    url(r'^writeup/', direct_to_template, {'template': 'writeup.html'}, name= "writeup"),
+    url(r'^500/', direct_to_template, {'template': 'error.html'}, name = "500"),
+    url(r'^polls/', include('polls.urls'), name = "polls"),
+    url(r'^blog/', include('blog.urls'), name = "blog"),
 )
 
 
