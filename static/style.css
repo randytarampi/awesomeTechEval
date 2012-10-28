@@ -30,7 +30,7 @@ h3 {
 }
 
 .dashboard #content {
-	width: auto;
+    width: auto;
 }
 
 .finePrint {
@@ -42,12 +42,12 @@ h3 {
 }
 
 .pollRelated {
-	width: 250px;
-	margin-bottom: 14px;
+    width: 250px;
+    margin-bottom: 14px;
 }
 
 .pollRelated input[type="text"] {
-	width: 100%;
+    width: 100%;
 }
 
 .main { 
@@ -90,13 +90,13 @@ h3 {
     margin-left: -20px; 
 }
 
-#frame {
+#frame, #container {
     min-height: 100%;
     position: relative;
 }
 
 #header {
-    position: fixed;
+    position: relative;
     height: 37px;
     width: 100%;
     top: 0;
@@ -106,9 +106,9 @@ h3 {
 }
 
 #leftHead {
+    position: absolute;
     padding: 8px;
     font-size: 18px;
-    position: absolute;
 }
 
 #rightHead { 
@@ -118,16 +118,16 @@ h3 {
 }
 
 #content {
-    padding: 37px;
-	margin: 0px 15px;
+    margin: 18px 37px;
+    padding-bottom: 37px;
 }
 
 #footer {
-    position: fixed;
+    position: absolute;
     height: 37px; 
     width: 100%;
     bottom: 0;
-	padding: 0;
+    padding: 0;
     background: #417690;
     color: #f4f379;
     overflow: hidden;
@@ -142,7 +142,6 @@ h3 {
 #rightFoot {
     float: right;
     padding: 10px;
-    display: inline;
     font-size: 14px;
 }
 
