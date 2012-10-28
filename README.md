@@ -16,4 +16,6 @@ The Poll was based on the [official Django tutorial](https://docs.djangoproject.
 The Blog was based on the tutorial found [here](http://lightbird.net/dbe/blog.html).
 The [Calendar](http://lightbird.net/dbe/cal1.html) and [Forum](http://lightbird.net/dbe/forum1.html) were based on similar tutorials.
 
-Thanks to [Kevin](https://github.com/kevinmannn) and [Derek](https://github.com/derekfong) for fielding [my](https://github.com/randytarampi) endless questions about how to get things rolling and rants about how high the learning curve was.
+Thanks to [Kevin](https://github.com/kevinmannn) and [Derek](https://github.com/derekfong) for fielding [my](https://github.com/randytarampi) endless questions about what to look at & how to get things rolling and my loud ranting about how high the learning curve was.
+
+Also, thanks to the people behind the Django admin interface as we borrowed their general styling/design (yay for boring colours!)
