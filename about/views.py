@@ -6,4 +6,4 @@ from polls.models import Choice, Poll
 
 # Create your views here.
 def index(request):
-    return render_to_response('about.html')
+    return render_to_response('aboutIndex.html')

@@ -9,7 +9,7 @@ def vote(request, poll_id):
     p = get_object_or_404(Poll, pk=poll_id)
     
     if 'choice' in request.POST and len(request.POST['newChoice']) != 0:
-       return render_to_response('polls/detail.html', {
+       return render_to_response('pollsDetail.html', {
             'poll': p,
             'error_message': "You have to pick/make a choice, a single choice - you can't do both. It's not that hard.",
         }, context_instance=RequestContext(request))
@@ -42,12 +42,12 @@ def vote(request, poll_id):
         else:
             selected_choice.votes += 1
             selected_choice.save()
-            return render_to_response('polls/detail.html', {
+            return render_to_response('pollsDetail.html', {
                     'poll': p,
                     'error_message': "Would it kill you to be original?",
                     }, context_instance=RequestContext(request))
     else:
-        return render_to_response('polls/detail.html', {
+        return render_to_response('pollsDetail.html', {
                     'poll': p,
                     'error_message': "You have to pick or make a choice. It's not that hard.",
                     }, context_instance=RequestContext(request))
@@ -55,15 +55,15 @@ def vote(request, poll_id):
 def create(request):
     import datetime
     if len(request.POST['question']) == 0 and len(request.POST['choice']) == 0:
-	return render_to_response('polls/index.html', {
+	return render_to_response('pollsIndex.html', {
                       	'error_message': "You need to type a choice and question in.", 'latest_poll_list' : Poll.objects.all().order_by('-pub_date')[:5],
                     	}, context_instance=RequestContext(request))
     elif len(request.POST['choice']) == 0:
-	return render_to_response('polls/index.html', {
+	return render_to_response('pollsIndex.html', {
                       	'error_message': "You need to type a choice in.", 'latest_poll_list' : Poll.objects.all().order_by('-pub_date')[:5],
                     	}, context_instance=RequestContext(request))
     elif len(request.POST['question']) == 0:
-	return render_to_response('polls/index.html', {
+	return render_to_response('pollsIndex.html', {
                       	'error_message': "You need to type a question in.", 'latest_poll_list' : Poll.objects.all().order_by('-pub_date')[:5],
                     	}, context_instance=RequestContext(request))
     else:
