@@ -7,4 +7,4 @@ By: [Randy Tarampi](https://github.com/randytarampi), [Steven Evans](https://git
 
 Featuring Django and will be located at http://cmpt470.csil.sfu.ca:8017
 
-A half completed version was submitted on the 24th, which can be found [here](https://github.com/randytarampi/awesomeTechEval/tree/final), though we intend on finishing the features that we did not complete at a later date.
+A half completed version was submitted on the 24th, which can be found tagged as [final](https://github.com/randytarampi/awesomeTechEval/tree/final), though we intend on finishing the features that we did not complete at a later date.
