@@ -1,15 +1,21 @@
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
 {% load dajaxice_templatetags %}
 
 <!DOCTYPE html>
 <html>
 {% block head %}
 <head>
-  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}reset.css" />
-  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}style.css" />
+  <link rel="stylesheet" type="text/css"
+		href="{{STATIC_PREFIX}}reset.css" />
+  <link rel="stylesheet" type="text/css"
+		href="{{STATIC_PREFIX}}style.css" />
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>Team Awesome Demo Site</title>
-  <script src="{{STATIC_URL}}jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="{{STATIC_URL}}dajax/jquery.dajax.core.js" type="text/javascript" charset="utf-8"></script>
+  <title>{% block title %} Team Awesome Demo Site {% endblock %}</title>
+  <script src="{{STATIC_PREFIX}}jquery-1.7.2.min.js"
+  type="text/javascript" charset="utf-8"></script>
+  <script src="{{STATIC_PREFIX}}dajax/jquery.dajax.core.js"
+  type="text/javascript" charset="utf-8"></script>
   {% dajaxice_js_import %}
 </head>
 {% endblock %}
