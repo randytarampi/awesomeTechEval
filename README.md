@@ -19,6 +19,9 @@ These aren't quite dependencies yet, but we're planning on using them in our pro
 Now "requires" dajax & dajaxice which can be found [here](http://www.dajaxproject.com/).
 Also includes jQuery 1.7.2, which can be found [here](http://code.jquery.com/jquery-1.7.2.js).
 
+
+This project uses the HTML5 Boilerplate CSS reset, which can be found [here](https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css)
+
 Acknowledgements:
 -----------------
 
