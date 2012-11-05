@@ -1,5 +1,5 @@
 /* Mostly borrowed from the Django Admin CSS sheet, though fixed for our base sheet. */
-/* Some borrowed from the Django tutorial referred to in the blog */
+/* Some borrowed from the Django tutorials referred to on their respective pages. */
 
 html {
     height: 100%;
@@ -37,8 +37,12 @@ h3 {
     font-size: 6px;
 }
 
-.error, .obviousError {
+.error, .obviousError, #personError {
     color: red;
+}
+
+.hideIt {
+	display: none;
 }
 
 .pollRelated {

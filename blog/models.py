@@ -33,13 +33,3 @@ class Comment(models.Model):
 
         if "notify" in kwargs: del kwargs["notify"]
         super(Comment, self).save(*args, **kwargs)
-
-
-### Admin
-
-class PostAdmin(admin.ModelAdmin):
-    search_fields = ["title"]
-    display_fields = ["title", "created"]
-
-class CommentAdmin(admin.ModelAdmin):
-    display_fields = ["post", "author", "created"]

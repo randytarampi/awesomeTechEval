@@ -30,6 +30,7 @@ urlpatterns = patterns('',
 
     # Test URLs
     url(r'^testDajaxice', include('testDajaxice.urls')),
+    url(r'^testDajax', include('testDajax.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns()

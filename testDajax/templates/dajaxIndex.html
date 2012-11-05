@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block extrajs %}
+<script type="text/javascript" charset="utf-8">
+var _cur_person = 1;
+
+function add_person() {
+  data = $('#person_form').serializeObject();
+  Dajaxice.testDajax.add_person(Dajax.process, {'form':data});
+  return false;
+};
+
+function say_hello() {
+  Dajaxice.testDajax.say_hello(Dajax.process);
+};
+
+Dajaxice.testDajax.get_person(Dajax.process, {'pk':_cur_person});
+</script>
+{% endblock %}
+
+{% block content %}
+<h5>As taken from this <a href="http://www.pythondiary.com/tutorials/django-and-ajax-dajax.html">tutorial</a>.</h5>
+
+<input type="button" value="Say Hello" onclick="say_hello();" />
+
+<div id="idError" class="hideIt">You have reached the end of the
+  database.</div>
+
+<table border="1">
+<tr><th>Name</th><td id="idName"></td></tr>
+<tr><th>Birthday</th><td id="idDay"></td></tr>
+<tr><th>Gift bought</th><td id="idGift"></td></tr>
+</table>
+
+<a href="#" onclick="Dajaxice.testDajax.get_person(Dajax.process,
+					 {'pk':_cur_person-1});">&lt;</a> 
+<a href="#" onclick="Dajaxice.testDajax.get_person(Dajax.process,
+					 {'pk':_cur_person+1});">&gt;</a>
+
+<div id="personError"></div>
+
+<form action="" method="POST" id="person_form" accept-charset="utf-8">
+  {% csrf_token %}
+  <table>{{form}}</table>
+  <input type="button" value="Add Person" onclick="add_person();" />
+</form>
+{% endblock %}

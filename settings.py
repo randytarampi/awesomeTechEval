@@ -146,6 +146,7 @@ INSTALLED_APPS = (
     'about',
     #'forum',
     'testDajaxice',
+    'testDajax',
 )
 
 # A sample logging configuration. The only tangible logging
