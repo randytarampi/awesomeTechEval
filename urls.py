@@ -29,8 +29,7 @@ urlpatterns = patterns('',
     url(r'^blog/', include('blog.urls')),
 
     # Test URLs
-    url(r'^test/', direct_to_template, {'template': 'test.html'}, name= "test"),
-    url(r'^test/dajaxice', include(testDajaxice.urls)),
+    url(r'^testDajaxice', include('testDajaxice.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns()

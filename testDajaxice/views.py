@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from ajaxsite.blog.forms import ContactForm
+from testDajaxice.forms import ContactForm
 
 # Create your views here.
-def contact_form(req):
-    return render(req, "blog/contact_form.html", {'form':ContactForm()})
+def contact_form(request):
+    return render(request, "dajaxiceIndex.html", {'form':ContactForm()})

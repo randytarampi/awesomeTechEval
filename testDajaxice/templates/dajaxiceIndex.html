@@ -11,12 +11,12 @@ function message_callback(data){
   data.status["message"] + "</p>");
     }
   }
-}
+};
 function send_message(){
   data = $('#contact_form').serializeObject();
-  Dajaxice.blog.send_message(message_callback, {'form':data});
+  Dajaxice.testDajaxice.send_message(message_callback, {'form':data});
   return false;
-}
+};
 </script>
 {% endblock %}
 

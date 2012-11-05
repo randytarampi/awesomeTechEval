@@ -1,6 +1,6 @@
-from dajaxice.decorators import dajaxice_register
-from ajaxsite.blog.forms import ContactForm
 from django.utils import simplejson
+from dajaxice.decorators import dajaxice_register
+from testDajaxice.forms import ContactForm
 
 @dajaxice_register
 def send_message(req, form):
