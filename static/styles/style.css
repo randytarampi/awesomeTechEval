@@ -111,12 +111,12 @@ h3 {
 
 #leftHead {
     position: absolute;
-    padding: 8px;
+    padding: 6px;
     font-size: 18px;
 }
 
 #rightHead { 
-    padding: 10px;
+    padding: 9px;
     float: right;
     font-size: 14px;
 }
@@ -139,13 +139,13 @@ h3 {
 
 #leftFoot {
     position: absolute;
-    padding: 10px;
+    padding: 9px;
     font-size: 14px;
 }
 
 #rightFoot {
     float: right;
-    padding: 10px;
+    padding: 9px;
     font-size: 14px;
 }
 

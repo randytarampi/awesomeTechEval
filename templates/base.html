@@ -4,7 +4,6 @@
 
 <!DOCTYPE html>
 <html>
-{% block head %}
 <head>
   <link rel="stylesheet" type="text/css"
 		href="{{STATIC_PREFIX}}reset.css" />
@@ -20,8 +19,9 @@
   type="text/javascript" charset="utf-8"></script>
   {% dajaxice_js_import %}
   {% block extrajs %}{% endblock %}
+  {% block headExt %}
+  {% endblock %}
 </head>
-{% endblock %}
 
 {% block body %}
 <body>

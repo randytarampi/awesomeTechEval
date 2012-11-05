@@ -129,7 +129,9 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
+    # Commented to fix the "Does not exist /admin/" issue.
+    # See http://stackoverflow.com/questions/9736975/django-admin-doesnotexist-at-admin
+    #'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
