@@ -145,6 +145,7 @@ INSTALLED_APPS = (
     #'calendarapp',
     'about',
     #'forum',
+    'testDajaxice',
 )
 
 # A sample logging configuration. The only tangible logging

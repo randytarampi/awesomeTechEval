@@ -14,9 +14,12 @@
   <title>{% block title %} Team Awesome Demo Site {% endblock %}</title>
   <script src="{{STATIC_PREFIX}}jquery-1.7.2.min.js"
   type="text/javascript" charset="utf-8"></script>
+  <script src="{{STATIC_PREFIX}}jquery.ba-serializeobject.min.js"
+  type="text/javascript" charset="utf-8"></script>
   <script src="{{STATIC_PREFIX}}dajax/jquery.dajax.core.js"
   type="text/javascript" charset="utf-8"></script>
   {% dajaxice_js_import %}
+  {% block extrajs %}{% endblock %}
 </head>
 {% endblock %}
 
