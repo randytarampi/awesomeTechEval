@@ -29,8 +29,8 @@ urlpatterns = patterns('',
     url(r'^blog/', include('blog.urls')),
 
     # Test URLs
-    url(r'^testDajaxice', include('testDajaxice.urls')),
-    url(r'^testDajax', include('testDajax.urls')),
+    url(r'^testDajaxice/', include('testDajaxice.urls')),
+    url(r'^testDajax/', include('testDajax.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns()

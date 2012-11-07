@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html>
+{% block head %}
 <head>
   <link rel="stylesheet" type="text/css"
 		href="{{STATIC_PREFIX}}reset.css" />
@@ -18,17 +19,20 @@
   <script src="{{STATIC_PREFIX}}dajax/jquery.dajax.core.js"
   type="text/javascript" charset="utf-8"></script>
   {% dajaxice_js_import %}
+  {% block extracss %}{% endblock %}
   {% block extrajs %}{% endblock %}
-  {% block headExt %}
-  {% endblock %}
+  {% block headExt %}{% endblock %}
 </head>
-
+{% endblock %}
 {% block body %}
 <body>
-<div id="frame">
+{% block container %}
+<div id="container">
   <div id="header">
+	{% block header %}
     <span id="leftHead">
-      <a href="{% url index %}">Team Awesome</a> Django Evaluation
+      {% block branding %}<a href="{% url index %}">Team Awesome</a>
+      Django Evaluation{% endblock %}
     </span>
     <span id="rightHead">
       <a href="{% url index %}">Home</a> |
@@ -40,8 +44,11 @@
       <a href="/404/">404</a> |
       <a href="{% url 500 %}">500</a> |
       <a href="{% url poll_index %}">Polls</a> |
-	  <a href="/blog/">Blog</a>   
-      </span>
+	  <a href="/blog/">Blog</a>
+	  <a href="{% url testDajax_index %}">Dajax Test</a> |
+	  <a href="{% url testDajaxice_index %}">Dajaxice Test</a>
+	</span>
+	{% endblock %}
     </div>
 
   <div id="sidebar">
@@ -55,6 +62,7 @@
   </div>
 
   <div id="footer">
+	{% block footer %}
     <span id="leftFoot">
       <a href="javascript:history.go(-1)">Back</a> | <a href="/">Home</a> | <a href="javascript:history.go(1)">Forward</a>
     </span>
@@ -68,9 +76,10 @@
       from <a href="https://github.com/randytarampi/awesomeTechEval"
       >GitHub</a>
     </span>
+	{% endblock %}
   </div>
 </div>
+{% endblock %}
 </body>
 {% endblock %}
-
 </html>
