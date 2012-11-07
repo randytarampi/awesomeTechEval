@@ -7,9 +7,9 @@ By: [Randy Tarampi](https://github.com/randytarampi), [Steven Evans](https://git
 
 Featuring Django and will be located at http://cmpt470.csil.sfu.ca:8017
 
-A half completed version was submitted on the 24th, which can be found tagged as [final](https://github.com/randytarampi/awesomeTechEval/tree/final), though we intend on finishing the features that we did not complete at a later date.
+A half completed version was submitted on the 24th, which can be found tagged as [final](https://github.com/randytarampi/awesomeTechEval/tree/final).
 
-Actually, instead of "finishing" it, we're going to use this as a testing ground for stuff we find online.
+Instead of "finishing" it, we're going to use this as a testing ground for stuff we find online.
 
 "Dependenices":
 -------------
@@ -28,8 +28,8 @@ Acknowledgements:
 The Poll was based on the [official Django tutorial](https://docs.djangoproject.com/en/1.3/intro/tutorial01/).
 The Blog was based on the tutorial found [here](http://lightbird.net/dbe/blog.html).
 The [Calendar](http://lightbird.net/dbe/cal1.html) and [Forum](http://lightbird.net/dbe/forum1.html) were also based on similar tutorials.
-The Dajax & Dajaxice apps are care of the tutorials by [Kevin Veroneau](http://www.pythondiary.com/tutorials/).
+The [Dajax & Dajaxice}(http://www.dajaxproject.com) apps are care of the tutorials by [Kevin Veroneau](http://www.pythondiary.com/tutorials/).
 
-Thanks to [Kevin](https://github.com/kevinmannn) and [Derek](https://github.com/derekfong) for fielding [my](https://github.com/randytarampi) endless questions about what to look at (nav bars!) & how to get things rolling and (also to anyone else I bothered with) my loud ranting about how high the learning curve was.
+Thanks to [Kevin](https://github.com/kevinmannn) and [Derek](https://github.com/derekfong) for fielding [Randy's](https://github.com/randytarampi) endless questions about what to look at (nav bars!) & how to get things rolling and (also to anyone else I bothered with) my loud ranting about how high the learning curve was.
 
 Also, thanks to the people behind the Django admin interface as we borrowed their general styling/design (yay for boring colours!)
