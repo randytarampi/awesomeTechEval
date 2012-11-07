@@ -51,10 +51,12 @@
     {% endblock %}
     </div>
 
+  {% if posts %}
   <div id="sidebar">
     {% block sidebar %}
     {% endblock %}
   </div>
+  {% endif %}
 
   <div id="content">
     {% block content %}
