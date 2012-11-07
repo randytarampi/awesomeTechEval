@@ -29,7 +29,7 @@
 {% block container %}
 <div id="container">
   <div id="header">
-	{% block header %}
+    {% block header %}
     <span id="leftHead">
       {% block branding %}<a href="{% url index %}">Team Awesome</a>
       Django Evaluation{% endblock %}
@@ -38,17 +38,17 @@
       <a href="{% url index %}">Home</a> |
       <a href="{% url about_index %}">About</a> | 
       <a href="{% url writeup %}">Writeup</a> |
-	  <a href="https://docs.google.com/presentation/pub?id=1PlHPK2eg71o_OgaF3P_U2tMauLHQhj9IFxSj-1xpPcE"
+      <a href="https://docs.google.com/presentation/pub?id=1PlHPK2eg71o_OgaF3P_U2tMauLHQhj9IFxSj-1xpPcE"
 	  >Presentation</a> |
       <a href="/admin/">Admin</a> |
       <a href="/404/">404</a> |
       <a href="{% url 500 %}">500</a> |
       <a href="{% url poll_index %}">Polls</a> |
-	  <a href="/blog/">Blog</a>
-	  <a href="{% url testDajax_index %}">Dajax Test</a> |
-	  <a href="{% url testDajaxice_index %}">Dajaxice Test</a>
-	</span>
-	{% endblock %}
+      <a href="/blog/">Blog</a> |
+      <a href="{% url testDajax_index %}">Dajax Test</a> |
+      <a href="{% url testDajaxice_index %}">Dajaxice Test</a>
+    </span>
+    {% endblock %}
     </div>
 
   <div id="sidebar">
