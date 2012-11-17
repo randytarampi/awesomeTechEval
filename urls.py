@@ -20,6 +20,9 @@ urlpatterns = patterns('',
     # Dajax/Dajaxice URLs
     url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),
 
+    # Robots.txt
+    url(r'^robots\.txt$', direct_to_template, {'template': 'robots.txt', 'mimetype': 'text/plain'}),
+
     # Tech Evaluation URLs
     url(r'^$', direct_to_template, {'template': 'index.html'}, name="index"),
     url(r'^about/', include('about.urls')),
